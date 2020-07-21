@@ -1,2 +1,5 @@
 # quiz-app
-Quiz
+Designed by carolinwagner
+
+Updated
+https://annidrumm.github.io/quiz-app/
