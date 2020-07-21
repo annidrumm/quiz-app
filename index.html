@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz-App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__headline">Quiz-App</h1>
+    </header>
+    <main>
+      <section class="card">
+        <button class="card__bookmark-button p-0"></button>
+        <h2 class="card__headline">Question 1</h2>
+        <p class="card__text card__text--question">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem odio cum
+          repudiandae cumque eius mollitia voluptatem voluptas deleniti quo
+          quaerat ratione unde, repellendus corporis nostrum repellat. Nisi
+          accusantium tempora vel.
+        </p>
+        <div class="card__answer-container">
+          <button class="card__answer-button">Show answer</button>
+        </div>
+
+        <ul class="tag-list">
+          <li>tag 1</li>
+          <li>tag 2</li>
+          <li>tag 3</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <button class="card__bookmark-button p-0"></button>
+        <h2 class="card__headline">Question 2</h2>
+        <p class="card__text card__text--question">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem odio cum
+          repudiandae cumque eius mollitia voluptatem voluptas deleniti quo
+          quaerat ratione unde, repellendus corporis nostrum repellat. Nisi
+          accusantium tempora vel.
+        </p>
+        <div class="card__answer-container">
+          <button class="card__answer-button">Show answer</button>
+        </div>
+
+        <ul class="tag-list">
+          <li>tag 1</li>
+          <li>tag 2</li>
+          <li>tag 3</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <button class="card__bookmark-button p-0"></button>
+        <h2 class="card__headline">Question 3</h2>
+        <p class="card__text card__text--question">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem odio cum
+          repudiandae cumque eius mollitia voluptatem voluptas deleniti quo
+          quaerat ratione unde, repellendus corporis nostrum repellat. Nisi
+          accusantium tempora vel.
+        </p>
+        <div class="card__answer-container">
+          <button class="card__answer-button">Show answer</button>
+        </div>
+
+        <ul class="tag-list">
+          <li>tag 1</li>
+          <li>tag 2</li>
+          <li>tag 3</li>
+          <li>tag 4</li>
+        </ul>
+      </section>
+      <script>
+        let bookmarkButton = document.querySelector('.card__bookmark-button')
+        bookmarkButton.addEventListener('click', () =>
+          bookmarkButton.classList.toggle('card__bookmark-button--active')
+        )
+      </script>
+    </main>
+    <footer class="footer">
+      <nav class="footer__nav">
+        <a href="index.html"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="svg-filled"
+          >
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline></svg
+        ></a>
+        <a href="bookmarks.html"
+          ><img src="img/bookmark.svg" alt="Bookmarks"
+        /></a>
+        <a href="create.html"><img src="img/edit.svg" alt="Create" /></a>
+        <a href="profile.html"><img src="img/users.svg" alt="profile" /></a>
+      </nav>
+    </footer>
+  </body>
+</html>
