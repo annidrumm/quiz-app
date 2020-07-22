@@ -10,7 +10,7 @@ bookmarkButton2.addEventListener('click', () =>
   bookmarkButton2.classList.toggle('card__bookmark-button--active')
 )
 
-let bookmarkButton3 = document.quer sySelector('#bookmark3')
+let bookmarkButton3 = document.querySelector('#bookmark3')
 bookmarkButton3.addEventListener('click', () =>
   bookmarkButton3.classList.toggle('card__bookmark-button--active')
 )
@@ -91,3 +91,18 @@ navProfile.addEventListener('click', () => {
 })
 
 // close navigation
+
+// start show answer
+let coll = document.getElementsByClassName('card__answer-button')
+let i
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener('click', function () {
+    this.classList.toggle('active')
+    let content = this.nextElementSibling
+    if (content.style.display === 'block') {
+      content.style.display = 'none'
+    } else {
+      content.style.display = 'block'
+    }
+  })
+}
