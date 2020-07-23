@@ -24,22 +24,26 @@ body {
 
 .light__button {
   background-color: #8ff2ee;
-  border-radius: 4px;
-  padding: 6px 15px;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
   font-size: 80%;
   cursor: pointer;
 }
 
 .night__button {
   background-color: #8ff2ee;
-  border-radius: 4px;
-  padding: 6px 15px;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
   font-size: 80%;
   cursor: pointer;
 }
 
 .light-mode {
-  background: #8de4ff;
+  background: white;
   content: 'Hide answer';
 }
 
