@@ -1,5 +1,5 @@
 # quiz-app
 Designed by carolinwagner
 
-Updated
+Update interactions with JS
 https://annidrumm.github.io/quiz-app/
