@@ -16,22 +16,26 @@ body {
 
 .light__button {
   background-color: #8ff2ee;
-  border-radius: 4px;
-  padding: 6px 15px;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
   font-size: 80%;
   cursor: pointer;
 }
 
 .night__button {
   background-color: #8ff2ee;
-  border-radius: 4px;
-  padding: 6px 15px;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
   font-size: 80%;
   cursor: pointer;
 }
 
 .light-mode {
-  background: #8de4ff;
+  background: white;
   content: "Hide answer";
 }
 
@@ -116,11 +120,10 @@ main {
 }
 .card__answer-button {
   background-color: #8ff2ee;
-  border-radius: 4px;
   display: inline-block;
-  padding: 6px 15px;
-  text-align: right;
-  margin: 20px;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
   font-size: 80%;
   cursor: pointer;
 }
@@ -155,9 +158,9 @@ main {
 .tag-list li {
   display: inline-block;
   padding: 5px 20px;
-  border: 1px solid #8ac4ff;
+  border: 1px solid #8de4ff48;
   border-radius: 8px;
-  background-color: #8de4ff;
+  background-color: #8de4ff48;
   margin: 10px;
   white-space: nowrap;
 }
@@ -181,9 +184,20 @@ main {
 }
 .logout__button {
   background-color: #8ff2ee;
-  border-radius: 4px;
   display: inline-block;
-  padding: 6px 15px;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+.submit-button {
+  background-color: #8ff2ee;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
   font-size: 80%;
   cursor: pointer;
 }
@@ -201,16 +215,6 @@ main {
 }
 .create__label {
   font-weight: bolder;
-}
-
-.submit-button {
-  background-color: #8ff2ee;
-  border-radius: 4px;
-  display: inline-block;
-  padding: 6px 15px;
-  margin: 50px 20px 20px 20px;
-  font-size: 80%;
-  cursor: pointer;
 }
 
 #question,
