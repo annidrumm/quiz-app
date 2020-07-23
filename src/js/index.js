@@ -1,24 +1,4 @@
-// start bookmarks
-
-let bookmarkButton = document.querySelector('#bookmark1')
-bookmarkButton.addEventListener('click', () =>
-  bookmarkButton.classList.toggle('card__bookmark-button--active')
-)
-
-let bookmarkButton2 = document.querySelector('#bookmark2')
-bookmarkButton2.addEventListener('click', () =>
-  bookmarkButton2.classList.toggle('card__bookmark-button--active')
-)
-
-let bookmarkButton3 = document.querySelector('#bookmark3')
-bookmarkButton3.addEventListener('click', () =>
-  bookmarkButton3.classList.toggle('card__bookmark-button--active')
-)
-
-// close bookmarks
-
-// start navigation
-
+// Navigation
 const navHome = document.querySelector('#nav_home')
 const navBookmarks = document.querySelector('#nav_bookmark')
 const navCreate = document.querySelector('#nav_create')
@@ -90,7 +70,24 @@ navProfile.addEventListener('click', () => {
   headerHome.classList.add('displaynone')
 })
 
-// close navigation
+// start bookmarks
+
+let bookmarkButton = document.querySelector('#bookmark1')
+bookmarkButton.addEventListener('click', () =>
+  bookmarkButton.classList.toggle('card__bookmark-button--active')
+)
+
+let bookmarkButton2 = document.querySelector('#bookmark2')
+bookmarkButton2.addEventListener('click', () =>
+  bookmarkButton2.classList.toggle('card__bookmark-button--active')
+)
+
+let bookmarkButton3 = document.querySelector('#bookmark3')
+bookmarkButton3.addEventListener('click', () =>
+  bookmarkButton3.classList.toggle('card__bookmark-button--active')
+)
+
+// close bookmarks
 
 // start show answer
 let coll = document.getElementsByClassName('card__answer-button')
@@ -106,3 +103,31 @@ for (i = 0; i < coll.length; i++) {
     }
   })
 }
+// End show answer
+// start form
+
+const fromSubmit = document.querySelector('.submit-button')
+fromSubmit.addEventListener('submit', function (event) {
+  event.preventDefault()
+  resetForm()
+})
+
+// End form
+
+// Start day-nightmode
+
+let darkMode = document.querySelector('.night__button')
+let body = document.querySelector('body')
+let lightMode = document.querySelector('.light__button')
+
+lightMode.addEventListener('click', () => {
+  body.classList.add('light-mode')
+  darkMode.classList.remove('displaynone')
+  lightMode.classList.add('displaynone')
+})
+
+darkMode.addEventListener('click', () => {
+  body.classList.remove('light-mode')
+  lightMode.classList.remove('displaynone')
+  darkMode.classList.add('displaynone')
+})

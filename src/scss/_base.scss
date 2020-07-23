@@ -22,6 +22,27 @@ body {
   background-repeat: no-repeat;
 }
 
+.light__button {
+  background-color: #8ff2ee;
+  border-radius: 4px;
+  padding: 6px 15px;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+.night__button {
+  background-color: #8ff2ee;
+  border-radius: 4px;
+  padding: 6px 15px;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+.light-mode {
+  background: #8de4ff;
+  content: 'Hide answer';
+}
+
 main {
   margin: 30px;
   overflow: scroll;
