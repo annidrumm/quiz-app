@@ -207,7 +207,11 @@ var bookmarkButton3 = document.querySelector('#bookmark3');
 bookmarkButton3.addEventListener('click', function () {
   return bookmarkButton3.classList.toggle('card__bookmark-button--active');
 }); // close bookmarks
-// start show answer
+
+var footerBookmark = document.querySelector('.svg-filled');
+footerBookmark.addEventListener('click', function () {
+  return footerBookmark.classList.toggle('svg-filled-active');
+}); // start show answer
 
 var coll = document.getElementsByClassName('card__answer-button');
 var i;
@@ -275,7 +279,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54593" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55175" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -452,4 +456,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/js/index.js"], null)
-//# sourceMappingURL=js.d818e0ef.js.map
+//# sourceMappingURL=/js.d818e0ef.js.map
