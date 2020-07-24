@@ -38,13 +38,13 @@
     width: 50px;
     -webkit-transform: rotate(0deg) skew(0deg);
     transform: rotate(0deg) skew(0deg);
-    border-left: 25px solid #8ff2ee;
-    border-right: 25px solid #8ff2ee;
+    border-left: 25px solid #8de4ff48;
+    border-right: 25px solid #8de4ff48;
     border-bottom: 25px solid white;
 
     &--active {
-      border-left: 25px solid #0a5552;
-      border-right: 25px solid #0a5552;
+      border-left: 25px solid #0b5d68;
+      border-right: 25px solid #0b5d68;
     }
   }
 }

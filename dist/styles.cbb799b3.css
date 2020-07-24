@@ -102,6 +102,13 @@ main {
   height: 40px;
 }
 
+.svg-filled-active {
+  fill: black;
+  color: black;
+  width: 40px;
+  height: 40px;
+}
+
 .card {
   background-color: white;
   border-radius: 10px;
@@ -138,13 +145,13 @@ main {
   width: 50px;
   -webkit-transform: rotate(0deg) skew(0deg);
   transform: rotate(0deg) skew(0deg);
-  border-left: 25px solid #8ff2ee;
-  border-right: 25px solid #8ff2ee;
+  border-left: 25px solid #8de4ff48;
+  border-right: 25px solid #8de4ff48;
   border-bottom: 25px solid white;
 }
 .card__bookmark-button--active {
-  border-left: 25px solid #0a5552;
-  border-right: 25px solid #0a5552;
+  border-left: 25px solid #0b5d68;
+  border-right: 25px solid #0b5d68;
 }
 
 .tag-list {
@@ -223,4 +230,4 @@ main {
   font-family: "Roboto", sans-serif;
 }
 
-/*# sourceMappingURL=styles.cbb799b3.css.map */
+/*# sourceMappingURL=/styles.cbb799b3.css.map */
