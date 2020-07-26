@@ -1,64 +1,78 @@
 // Navigation
-
 export function Navigation() {
   const navHome = document.querySelector('#nav_home')
   const navBookmarks = document.querySelector('#nav_bookmark')
   const navCreate = document.querySelector('#nav_create')
   const navProfile = document.querySelector('#nav_profile')
 
+  // Pages
   const indexPage = document.querySelector('#home')
   const indexBookmarks = document.querySelector('#bookmarks')
   const indexCreate = document.querySelector('#create')
   const indexProfile = document.querySelector('#profile')
 
+  // Headlines
   const headerHome = document.querySelector('#header1')
   const headerBookmark = document.querySelector('#header2')
   const headerCreate = document.querySelector('#header3')
   const headerProfile = document.querySelector('#header4')
 
   // Function
-  navHome.addEventListener('click', () => {
-    indexPage.classList.remove('displaynone')
+
+  const hideAllSections = () => {
+    indexPage.classList.add('displaynone')
     indexBookmarks.classList.add('displaynone')
     indexCreate.classList.add('displaynone')
     indexProfile.classList.add('displaynone')
-    headerHome.classList.remove('displaynone')
+  }
+
+  const inactiveAllSections = () => {
+    navHome.classList.remove('svg-filled')
+    navBookmarks.classList.remove('svg-filled')
+    navCreate.classList.remove('svg-filled')
+    navProfile.classList.remove('svg-filled')
+  }
+
+  const hideAllHeadlines = () => {
+    headerHome.classList.add('displaynone')
     headerBookmark.classList.add('displaynone')
     headerCreate.classList.add('displaynone')
     headerProfile.classList.add('displaynone')
+  }
+
+  navHome.addEventListener('click', () => {
+    hideAllSections()
+    inactiveAllSections()
+    hideAllHeadlines()
+    headerHome.classList.remove('displaynone')
+    indexPage.classList.remove('displaynone')
+    navHome.classList.add('svg-filled')
   })
 
   navBookmarks.addEventListener('click', () => {
+    hideAllSections()
+    inactiveAllSections()
+    hideAllHeadlines()
     indexBookmarks.classList.remove('displaynone')
-    indexPage.classList.add('displaynone')
-    indexCreate.classList.add('displaynone')
-    indexProfile.classList.add('displaynone')
+    navBookmarks.classList.add('svg-filled')
     headerBookmark.classList.remove('displaynone')
-    navBookmarks.classList.add('svg-filled-active')
-    headerHome.classList.add('displaynone')
-    headerCreate.classList.add('displaynone')
-    headerProfile.classList.add('displaynone')
   })
 
   navCreate.addEventListener('click', () => {
+    hideAllSections()
+    inactiveAllSections()
+    hideAllHeadlines()
     indexCreate.classList.remove('displaynone')
-    indexPage.classList.add('displaynone')
-    indexBookmarks.classList.add('displaynone')
-    indexProfile.classList.add('displaynone')
+    navCreate.classList.add('svg-filled')
     headerCreate.classList.remove('displaynone')
-    headerBookmark.classList.add('displaynone')
-    headerProfile.classList.add('displaynone')
-    headerHome.classList.add('displaynone')
   })
 
   navProfile.addEventListener('click', () => {
+    hideAllSections()
+    inactiveAllSections()
+    hideAllHeadlines()
     indexProfile.classList.remove('displaynone')
-    indexPage.classList.add('displaynone')
-    indexBookmarks.classList.add('displaynone')
-    indexCreate.classList.add('displaynone')
+    navProfile.classList.add('svg-filled')
     headerProfile.classList.remove('displaynone')
-    headerCreate.classList.add('displaynone')
-    headerBookmark.classList.add('displaynone')
-    headerHome.classList.add('displaynone')
   })
 }

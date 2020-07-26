@@ -1,5 +1,6 @@
 .profile__intro {
   display: flex;
+  overflow: scroll;
 
   &--image {
     border-radius: 50%;

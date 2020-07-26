@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/annidrumm/quiz-app#readme",
   "dependencies": {
-    ""
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
