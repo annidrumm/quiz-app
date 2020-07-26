@@ -16,23 +16,14 @@ export function Navigation() {
   const headerCreate = document.querySelector('#header3')
   const headerProfile = document.querySelector('#header4')
 
+  // Function
   navHome.addEventListener('click', () => {
     indexPage.classList.remove('displaynone')
     indexBookmarks.classList.add('displaynone')
     indexCreate.classList.add('displaynone')
     indexProfile.classList.add('displaynone')
-  })
-
-  navHome.addEventListener('click', () => {
     headerHome.classList.remove('displaynone')
     headerBookmark.classList.add('displaynone')
-    headerCreate.classList.add('displaynone')
-    headerProfile.classList.add('displaynone')
-  })
-
-  navBookmarks.addEventListener('click', () => {
-    headerBookmark.classList.remove('displaynone')
-    headerHome.classList.add('displaynone')
     headerCreate.classList.add('displaynone')
     headerProfile.classList.add('displaynone')
   })
@@ -42,6 +33,11 @@ export function Navigation() {
     indexPage.classList.add('displaynone')
     indexCreate.classList.add('displaynone')
     indexProfile.classList.add('displaynone')
+    headerBookmark.classList.remove('displaynone')
+    navBookmarks.classList.add('svg-filled-active')
+    headerHome.classList.add('displaynone')
+    headerCreate.classList.add('displaynone')
+    headerProfile.classList.add('displaynone')
   })
 
   navCreate.addEventListener('click', () => {
@@ -49,9 +45,6 @@ export function Navigation() {
     indexPage.classList.add('displaynone')
     indexBookmarks.classList.add('displaynone')
     indexProfile.classList.add('displaynone')
-  })
-
-  navCreate.addEventListener('click', () => {
     headerCreate.classList.remove('displaynone')
     headerBookmark.classList.add('displaynone')
     headerProfile.classList.add('displaynone')
@@ -63,9 +56,6 @@ export function Navigation() {
     indexPage.classList.add('displaynone')
     indexBookmarks.classList.add('displaynone')
     indexCreate.classList.add('displaynone')
-  })
-
-  navProfile.addEventListener('click', () => {
     headerProfile.classList.remove('displaynone')
     headerCreate.classList.add('displaynone')
     headerBookmark.classList.add('displaynone')

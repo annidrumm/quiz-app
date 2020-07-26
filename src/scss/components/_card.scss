@@ -3,7 +3,7 @@
   border-radius: 10px;
   padding: 30px;
   border-style: solid;
-  border-color: grey;
+  border-color: #a8c2f07b;
   margin: 0 20px 60px 20px;
   position: relative;
   box-shadow: 6px 4px 6px rgba(1, 57, 95, 0.2);
@@ -14,16 +14,6 @@
 
   &__answer-container {
     text-align: center;
-  }
-
-  &__answer-button {
-    background-color: #8ff2ee;
-    display: inline-block;
-    padding: 10px 25px 10px 25px;
-    margin: auto;
-    border-radius: 7px;
-    font-size: 80%;
-    cursor: pointer;
   }
 
   &__headline {
@@ -38,13 +28,13 @@
     width: 50px;
     -webkit-transform: rotate(0deg) skew(0deg);
     transform: rotate(0deg) skew(0deg);
-    border-left: 25px solid #8de4ff48;
-    border-right: 25px solid #8de4ff48;
+    border-left: 25px solid #a8c2f065;
+    border-right: 25px solid #a8c2f065;
     border-bottom: 25px solid white;
 
     &--active {
-      border-left: 25px solid #0b5d68;
-      border-right: 25px solid #0b5d68;
+      border-left: 25px solid #a387cf;
+      border-right: 25px solid #a387cf;
     }
   }
 }

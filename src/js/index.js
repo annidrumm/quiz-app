@@ -21,10 +21,14 @@ bookmarkButton3.addEventListener('click', () =>
 
 // close bookmarks
 
+// Start footer filling
+
 let footerBookmark = document.querySelector('.svg-filled')
 footerBookmark.addEventListener('click', () =>
   footerBookmark.classList.toggle('svg-filled-active')
 )
+
+// End footer filling
 
 // start show answer
 let coll = document.getElementsByClassName('card__answer-button')

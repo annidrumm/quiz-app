@@ -9,13 +9,20 @@ html {
 body {
   font-size: 112.5%;
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(18deg, #020024 4%, #014c73 33%, #015f7d 49%, #017a8b 57%, #018992 62%, #00ffcf 87%);
+  background: #a8c2f0;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
+main {
+  margin: 30px;
+  overflow: scroll;
+  flex: 1 0 auto;
+  height: 100%;
+}
+
 .light__button {
-  background-color: #8ff2ee;
+  background-color: #a387cf;
   display: inline-block;
   padding: 10px 25px 10px 25px;
   margin: auto;
@@ -25,7 +32,7 @@ body {
 }
 
 .night__button {
-  background-color: #8ff2ee;
+  background-color: #a387cf;
   display: inline-block;
   padding: 10px 25px 10px 25px;
   margin: auto;
@@ -35,15 +42,8 @@ body {
 }
 
 .light-mode {
-  background: white;
+  background: radial-gradient(circle, #86a5d9 47%, #5f4bb6 71%);
   content: "Hide answer";
-}
-
-main {
-  margin: 30px;
-  overflow: scroll;
-  flex: 1 0 auto;
-  height: 100%;
 }
 
 .displaynone {
@@ -63,7 +63,7 @@ main {
 }
 
 .header {
-  font-family: "Bungee Shade", cursive;
+  font-family: "Oswald", sans-serif;
   position: sticky;
 }
 .header__headline {
@@ -73,7 +73,7 @@ main {
 }
 
 .footer {
-  background-color: #8ce5c4;
+  background-color: #86a5d9;
   padding: 15px;
   width: auto;
   margin: 20px 0 0 0;
@@ -96,7 +96,7 @@ main {
 }
 
 .svg-filled {
-  fill: #8ce5c4;
+  fill: #86a5d9;
   color: black;
   width: 40px;
   height: 40px;
@@ -114,7 +114,7 @@ main {
   border-radius: 10px;
   padding: 30px;
   border-style: solid;
-  border-color: grey;
+  border-color: #a8c2f07b;
   margin: 0 20px 60px 20px;
   position: relative;
   box-shadow: 6px 4px 6px rgba(1, 57, 95, 0.2);
@@ -124,15 +124,6 @@ main {
 }
 .card__answer-container {
   text-align: center;
-}
-.card__answer-button {
-  background-color: #8ff2ee;
-  display: inline-block;
-  padding: 10px 25px 10px 25px;
-  margin: auto;
-  border-radius: 7px;
-  font-size: 80%;
-  cursor: pointer;
 }
 .card__headline {
   font-weight: bolder;
@@ -145,13 +136,13 @@ main {
   width: 50px;
   -webkit-transform: rotate(0deg) skew(0deg);
   transform: rotate(0deg) skew(0deg);
-  border-left: 25px solid #8de4ff48;
-  border-right: 25px solid #8de4ff48;
+  border-left: 25px solid #a8c2f065;
+  border-right: 25px solid #a8c2f065;
   border-bottom: 25px solid white;
 }
 .card__bookmark-button--active {
-  border-left: 25px solid #0b5d68;
-  border-right: 25px solid #0b5d68;
+  border-left: 25px solid #a387cf;
+  border-right: 25px solid #a387cf;
 }
 
 .tag-list {
@@ -165,9 +156,9 @@ main {
 .tag-list li {
   display: inline-block;
   padding: 5px 20px;
-  border: 1px solid #8de4ff48;
+  border: 1px solid #a8c2f065;
   border-radius: 8px;
-  background-color: #8de4ff48;
+  background-color: #a8c2f065;
   margin: 10px;
   white-space: nowrap;
 }
@@ -189,25 +180,6 @@ main {
 .logout {
   text-align: center;
 }
-.logout__button {
-  background-color: #8ff2ee;
-  display: inline-block;
-  padding: 10px 25px 10px 25px;
-  margin: auto;
-  border-radius: 7px;
-  font-size: 80%;
-  cursor: pointer;
-}
-
-.submit-button {
-  background-color: #8ff2ee;
-  display: inline-block;
-  padding: 10px 25px 10px 25px;
-  margin: auto;
-  border-radius: 7px;
-  font-size: 80%;
-  cursor: pointer;
-}
 
 .create {
   text-align: center;
@@ -228,6 +200,36 @@ main {
 #answer,
 #tags {
   font-family: "Roboto", sans-serif;
+}
+
+.submit-button {
+  background-color: #a387cf;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+.logout__button {
+  background-color: #a387cf;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+.card__answer-button {
+  background-color: #a387cf;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
+  font-size: 80%;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=/styles.cbb799b3.css.map */

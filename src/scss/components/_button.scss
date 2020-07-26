@@ -1,0 +1,62 @@
+.submit-button {
+  background-color: #a387cf;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+.logout__button {
+  background-color: #a387cf;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+.card__answer-button {
+  background-color: #a387cf;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+.light__button {
+  background-color: #a387cf;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+.night__button {
+  background-color: #a387cf;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+.light-mode {
+  background: radial-gradient(
+    circle,
+    rgba(134, 165, 217, 1) 47%,
+    rgba(95, 75, 182, 1) 71%
+  );
+  content: 'Hide answer';
+}
+
+.displaynone {
+  display: none;
+}
