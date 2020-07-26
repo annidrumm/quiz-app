@@ -138,22 +138,15 @@ function Navigation() {
   var headerHome = document.querySelector('#header1');
   var headerBookmark = document.querySelector('#header2');
   var headerCreate = document.querySelector('#header3');
-  var headerProfile = document.querySelector('#header4');
+  var headerProfile = document.querySelector('#header4'); // Function
+
   navHome.addEventListener('click', function () {
     indexPage.classList.remove('displaynone');
     indexBookmarks.classList.add('displaynone');
     indexCreate.classList.add('displaynone');
     indexProfile.classList.add('displaynone');
-  });
-  navHome.addEventListener('click', function () {
     headerHome.classList.remove('displaynone');
     headerBookmark.classList.add('displaynone');
-    headerCreate.classList.add('displaynone');
-    headerProfile.classList.add('displaynone');
-  });
-  navBookmarks.addEventListener('click', function () {
-    headerBookmark.classList.remove('displaynone');
-    headerHome.classList.add('displaynone');
     headerCreate.classList.add('displaynone');
     headerProfile.classList.add('displaynone');
   });
@@ -162,14 +155,17 @@ function Navigation() {
     indexPage.classList.add('displaynone');
     indexCreate.classList.add('displaynone');
     indexProfile.classList.add('displaynone');
+    headerBookmark.classList.remove('displaynone');
+    navBookmarks.classList.add('svg-filled-active');
+    headerHome.classList.add('displaynone');
+    headerCreate.classList.add('displaynone');
+    headerProfile.classList.add('displaynone');
   });
   navCreate.addEventListener('click', function () {
     indexCreate.classList.remove('displaynone');
     indexPage.classList.add('displaynone');
     indexBookmarks.classList.add('displaynone');
     indexProfile.classList.add('displaynone');
-  });
-  navCreate.addEventListener('click', function () {
     headerCreate.classList.remove('displaynone');
     headerBookmark.classList.add('displaynone');
     headerProfile.classList.add('displaynone');
@@ -180,8 +176,6 @@ function Navigation() {
     indexPage.classList.add('displaynone');
     indexBookmarks.classList.add('displaynone');
     indexCreate.classList.add('displaynone');
-  });
-  navProfile.addEventListener('click', function () {
     headerProfile.classList.remove('displaynone');
     headerCreate.classList.add('displaynone');
     headerBookmark.classList.add('displaynone');
@@ -207,11 +201,13 @@ var bookmarkButton3 = document.querySelector('#bookmark3');
 bookmarkButton3.addEventListener('click', function () {
   return bookmarkButton3.classList.toggle('card__bookmark-button--active');
 }); // close bookmarks
+// Start footer filling
 
 var footerBookmark = document.querySelector('.svg-filled');
 footerBookmark.addEventListener('click', function () {
   return footerBookmark.classList.toggle('svg-filled-active');
-}); // start show answer
+}); // End footer filling
+// start show answer
 
 var coll = document.getElementsByClassName('card__answer-button');
 var i;
@@ -279,7 +275,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55175" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51732" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
