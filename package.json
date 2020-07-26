@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build --public-url '.' index.html"
+    "build": "parcel index.html --public-url '.' index.html"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,12 @@
     "url": "https://github.com/annidrumm/quiz-app/issues"
   },
   "homepage": "https://github.com/annidrumm/quiz-app#readme",
-  "dependencies": {},
+  "dependencies": {
+    ""
+  },
   "devDependencies": {
     "@babel/core": "^7.10.5",
+    "babel-loader": "^8.1.0",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.10"
   }
