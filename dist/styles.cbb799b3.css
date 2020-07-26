@@ -21,35 +21,6 @@ main {
   height: 100%;
 }
 
-.light__button {
-  background-color: #a387cf;
-  display: inline-block;
-  padding: 10px 25px 10px 25px;
-  margin: auto;
-  border-radius: 7px;
-  font-size: 80%;
-  cursor: pointer;
-}
-
-.night__button {
-  background-color: #a387cf;
-  display: inline-block;
-  padding: 10px 25px 10px 25px;
-  margin: auto;
-  border-radius: 7px;
-  font-size: 80%;
-  cursor: pointer;
-}
-
-.light-mode {
-  background: radial-gradient(circle, #86a5d9 47%, #5f4bb6 71%);
-  content: "Hide answer";
-}
-
-.displaynone {
-  display: none;
-}
-
 .p-0 {
   padding: 0;
 }
@@ -230,6 +201,35 @@ main {
   border-radius: 7px;
   font-size: 80%;
   cursor: pointer;
+}
+
+.light__button {
+  background-color: #a387cf;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+.night__button {
+  background-color: #a387cf;
+  display: inline-block;
+  padding: 10px 25px 10px 25px;
+  margin: auto;
+  border-radius: 7px;
+  font-size: 80%;
+  cursor: pointer;
+}
+
+.light-mode {
+  background: radial-gradient(circle, #86a5d9 47%, #5f4bb6 71%);
+  content: "Hide answer";
+}
+
+.displaynone {
+  display: none;
 }
 
 /*# sourceMappingURL=/styles.cbb799b3.css.map */

@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carolinwagner/quiz-app.git"
+    "url": "git+https://github.com/annidrumm/quiz-app.git"
   },
   "author": "Carolin Wagner",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/carolinwagner/quiz-app/issues"
+    "url": "https://github.com/annidrumm/quiz-app/issues"
   },
-  "homepage": "https://github.com/carolinwagner/quiz-app#readme",
+  "homepage": "https://github.com/annidrumm/quiz-app#readme",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.10.5",
