@@ -136,6 +136,7 @@ main {
 
 .profile__intro {
   display: flex;
+  overflow: scroll;
 }
 .profile__intro--image {
   border-radius: 50%;
