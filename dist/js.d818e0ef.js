@@ -163,7 +163,7 @@ function Navigation() {
     headerProfile.classList.add('displaynone');
   };
 
-  navHome.addEventListener('click', function () {
+  navHome === null || navHome === void 0 ? void 0 : navHome.addEventListener('click', function () {
     hideAllSections();
     inactiveAllSections();
     hideAllHeadlines();
@@ -171,7 +171,7 @@ function Navigation() {
     indexPage.classList.remove('displaynone');
     navHome.classList.add('svg-filled');
   });
-  navBookmarks.addEventListener('click', function () {
+  navBookmarks === null || navBookmarks === void 0 ? void 0 : navBookmarks.addEventListener('click', function () {
     hideAllSections();
     inactiveAllSections();
     hideAllHeadlines();
@@ -179,7 +179,7 @@ function Navigation() {
     navBookmarks.classList.add('svg-filled');
     headerBookmark.classList.remove('displaynone');
   });
-  navCreate.addEventListener('click', function () {
+  navCreate === null || navCreate === void 0 ? void 0 : navCreate.addEventListener('click', function () {
     hideAllSections();
     inactiveAllSections();
     hideAllHeadlines();
@@ -187,7 +187,7 @@ function Navigation() {
     navCreate.classList.add('svg-filled');
     headerCreate.classList.remove('displaynone');
   });
-  navProfile.addEventListener('click', function () {
+  navProfile === null || navProfile === void 0 ? void 0 : navProfile.addEventListener('click', function () {
     hideAllSections();
     inactiveAllSections();
     hideAllHeadlines();
@@ -206,42 +206,17 @@ exports.Bookmarks = Bookmarks;
 
 function Bookmarks() {
   var bookmarkButton = document.querySelector('#bookmark1');
-  bookmarkButton.addEventListener('click', function () {
+  bookmarkButton === null || bookmarkButton === void 0 ? void 0 : bookmarkButton.addEventListener('click', function () {
     return bookmarkButton.classList.toggle('card__bookmark-button--active');
   });
   var bookmarkButton2 = document.querySelector('#bookmark2');
-  bookmarkButton2.addEventListener('click', function () {
+  bookmarkButton2 === null || bookmarkButton2 === void 0 ? void 0 : bookmarkButton2.addEventListener('click', function () {
     return bookmarkButton2.classList.toggle('card__bookmark-button--active');
   });
   var bookmarkButton3 = document.querySelector('#bookmark3');
-  bookmarkButton3.addEventListener('click', function () {
+  bookmarkButton3 === null || bookmarkButton3 === void 0 ? void 0 : bookmarkButton3.addEventListener('click', function () {
     return bookmarkButton3.classList.toggle('card__bookmark-button--active');
   });
-}
-},{}],"src/js/show-answer.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.ShowAnswer = ShowAnswer;
-
-function ShowAnswer() {
-  var coll = document.getElementsByClassName('card__answer-button');
-  var i;
-
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener('click', function () {
-      this.classList.toggle('active');
-      var content = this.nextElementSibling;
-
-      if (content.style.display === 'block') {
-        content.style.display = 'none';
-      } else {
-        content.style.display = 'block';
-      }
-    });
-  }
 }
 },{}],"src/js/form.js":[function(require,module,exports) {
 "use strict";
@@ -253,7 +228,7 @@ exports.Form = Form;
 
 function Form() {
   var fromSubmit = document.querySelector('.submit-button');
-  fromSubmit.addEventListener('submit', function (event) {
+  fromSubmit === null || fromSubmit === void 0 ? void 0 : fromSubmit.addEventListener('submit', function (event) {
     event.preventDefault();
     resetForm();
   });
@@ -270,16 +245,101 @@ function DayNightMode() {
   var darkMode = document.querySelector('.night__button');
   var body = document.querySelector('body');
   var lightMode = document.querySelector('.light__button');
-  lightMode.addEventListener('click', function () {
+  lightMode === null || lightMode === void 0 ? void 0 : lightMode.addEventListener('click', function () {
     body.classList.add('light-mode');
     darkMode.classList.remove('displaynone');
     lightMode.classList.add('displaynone');
   });
-  darkMode.addEventListener('click', function () {
+  darkMode === null || darkMode === void 0 ? void 0 : darkMode.addEventListener('click', function () {
     body.classList.remove('light-mode');
     lightMode.classList.remove('displaynone');
     darkMode.classList.add('displaynone');
   });
+}
+},{}],"src/js/arraycard.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Arraycard = Arraycard;
+
+function Arraycard() {
+  var placeholder = get('[data-js=placeholder]');
+  var card = [{}, {}, {}];
+  card.forEach(createCard);
+
+  function createCard(element) {
+    var newCard = createElement({
+      type: 'section',
+      className: 'card',
+      text: ''
+    });
+    var headline = createElement({
+      type: 'h2',
+      className: 'card__headline',
+      text: 'Question 1',
+      target: newCard
+    });
+    var question = createElement({
+      type: 'paragraph',
+      className: 'card__text card__text--question',
+      text: 'What is the difference between method and property?',
+      target: newCard
+    });
+    var answerButton = createElement({
+      type: 'button',
+      className: 'card__answer-button',
+      text: 'Show Answer',
+      target: newCard
+    });
+    var answer = createElement({
+      type: 'paragraph',
+      className: 'content',
+      text: 'Properties are basically information that an object has. Methods are what an object can do. Example: You have an instance (object) from a class named Vehicle, which can represent a car, a truck or a motorbike.',
+      target: newCard
+    });
+    var ul = createElement({
+      type: 'ul',
+      className: 'tag-list',
+      text: '',
+      target: newCard
+    });
+    var tag1 = createElement({
+      type: 'li',
+      className: 'tag-list li',
+      text: 'tag 1',
+      target: ul
+    });
+    var tag2 = createElement({
+      type: 'li',
+      className: 'tag-list li',
+      text: 'tag 2',
+      target: ul
+    });
+  }
+
+  function createElement() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        _ref$type = _ref.type,
+        type = _ref$type === void 0 ? 'section' : _ref$type,
+        _ref$className = _ref.className,
+        className = _ref$className === void 0 ? '' : _ref$className,
+        _ref$text = _ref.text,
+        text = _ref$text === void 0 ? '' : _ref$text,
+        _ref$target = _ref.target,
+        target = _ref$target === void 0 ? placeholder : _ref$target;
+
+    var el = document.createElement(type);
+    el.className = className;
+    el.textContent = text;
+    target.appendChild(el);
+    return el;
+  }
+
+  function get(selector) {
+    return document.querySelector(selector);
+  }
 }
 },{}],"src/js/index.js":[function(require,module,exports) {
 "use strict";
@@ -288,18 +348,24 @@ var _nav = require("./nav");
 
 var _bookmarks = require("./bookmarks");
 
-var _showAnswer = require("./show-answer");
-
 var _form = require("./form");
 
 var _dayNightmode = require("./day-nightmode");
 
-(0, _nav.Navigation)();
-(0, _bookmarks.Bookmarks)();
-(0, _showAnswer.ShowAnswer)();
-(0, _form.Form)();
-(0, _dayNightmode.DayNightMode)();
-},{"./nav":"src/js/nav.js","./bookmarks":"src/js/bookmarks.js","./show-answer":"src/js/show-answer.js","./form":"src/js/form.js","./day-nightmode":"src/js/day-nightmode.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var _arraycard = require("./arraycard");
+
+//import { ShowAnswer } from './show-answer'
+document.addEventListener('DOMContentLoaded', function () {
+  setTimeout(function () {
+    (0, _nav.Navigation)();
+    (0, _bookmarks.Bookmarks)(); // ShowAnswer()
+
+    (0, _form.Form)();
+    (0, _dayNightmode.DayNightMode)();
+    (0, _arraycard.Arraycard)();
+  });
+});
+},{"./nav":"src/js/nav.js","./bookmarks":"src/js/bookmarks.js","./form":"src/js/form.js","./day-nightmode":"src/js/day-nightmode.js","./arraycard":"src/js/arraycard.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -327,7 +393,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53441" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59479" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -40,7 +40,7 @@ export function Navigation() {
     headerProfile.classList.add('displaynone')
   }
 
-  navHome.addEventListener('click', () => {
+  navHome?.addEventListener('click', () => {
     hideAllSections()
     inactiveAllSections()
     hideAllHeadlines()
@@ -49,7 +49,7 @@ export function Navigation() {
     navHome.classList.add('svg-filled')
   })
 
-  navBookmarks.addEventListener('click', () => {
+  navBookmarks?.addEventListener('click', () => {
     hideAllSections()
     inactiveAllSections()
     hideAllHeadlines()
@@ -58,7 +58,7 @@ export function Navigation() {
     headerBookmark.classList.remove('displaynone')
   })
 
-  navCreate.addEventListener('click', () => {
+  navCreate?.addEventListener('click', () => {
     hideAllSections()
     inactiveAllSections()
     hideAllHeadlines()
@@ -67,7 +67,7 @@ export function Navigation() {
     headerCreate.classList.remove('displaynone')
   })
 
-  navProfile.addEventListener('click', () => {
+  navProfile?.addEventListener('click', () => {
     hideAllSections()
     inactiveAllSections()
     hideAllHeadlines()

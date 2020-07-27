@@ -3,13 +3,13 @@ export function DayNightMode() {
   let body = document.querySelector('body')
   let lightMode = document.querySelector('.light__button')
 
-  lightMode.addEventListener('click', () => {
+  lightMode?.addEventListener('click', () => {
     body.classList.add('light-mode')
     darkMode.classList.remove('displaynone')
     lightMode.classList.add('displaynone')
   })
 
-  darkMode.addEventListener('click', () => {
+  darkMode?.addEventListener('click', () => {
     body.classList.remove('light-mode')
     lightMode.classList.remove('displaynone')
     darkMode.classList.add('displaynone')

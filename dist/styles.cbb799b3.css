@@ -196,7 +196,7 @@ main {
 
 .card__answer-button {
   background-color: #a387cf;
-  display: inline-block;
+  display: block;
   padding: 10px 25px 10px 25px;
   margin: auto;
   border-radius: 7px;

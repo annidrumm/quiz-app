@@ -1,11 +1,17 @@
 import { Navigation } from './nav'
 import { Bookmarks } from './bookmarks'
-import { ShowAnswer } from './show-answer'
+//import { ShowAnswer } from './show-answer'
 import { Form } from './form'
 import { DayNightMode } from './day-nightmode'
+import { Arraycard } from './arraycard'
 
-Navigation()
-Bookmarks()
-ShowAnswer()
-Form()
-DayNightMode()
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    Navigation()
+    Bookmarks()
+    // ShowAnswer()
+    Form()
+    DayNightMode()
+    Arraycard()
+  })
+})
