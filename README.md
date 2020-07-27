@@ -1,4 +1,4 @@
 # quiz-app
 
-Added interactions with JS
+A simple app with questions and answers 
 https://annidrumm.github.io/quiz-app/
