@@ -203,96 +203,92 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.Card = Card;
+var placeholder = get('[data-js=placeholder]');
 
-//import { ShowAnswer } from './show-answer'
 function Card() {
-  var placeholder = get('[data-js=placeholder]');
   var card = [{}, {}, {}];
   card.forEach(createCard);
+}
 
-  function createCard(element) {
-    var newCard = createElement({
-      type: 'section',
-      className: 'card',
-      text: ''
-    });
-    var headline = createElement({
-      type: 'h2',
-      className: 'card__headline',
-      text: 'Question 1',
-      target: newCard
-    });
-    var question = createElement({
-      type: 'paragraph',
-      className: 'card__text card__text--question',
-      text: 'What is the difference between method and property?',
-      target: newCard
-    });
-    var answerButton = createElement({
-      type: 'button',
-      className: 'card__answer-button',
-      text: 'Show Answer',
-      target: newCard
-    });
-    answerButton.addEventListener('click', function () {
-      this.classList.toggle('active');
-      var content = this.nextElementSibling;
+function createCard(_ref) {
+  var question = _ref.question,
+      answer = _ref.answer,
+      tags = _ref.tags;
+  var newCard = createElement({
+    type: 'section',
+    className: 'card',
+    text: ''
+  });
+  var headline = createElement({
+    type: 'h2',
+    className: 'card__headline',
+    text: 'Question',
+    target: newCard
+  });
+  var questionInput = createElement({
+    type: 'paragraph',
+    className: 'card__text card__text--question',
+    text: question,
+    target: newCard
+  });
+  var answerButton = createElement({
+    type: 'button',
+    className: 'card__answer-button',
+    text: 'Show Answer',
+    target: newCard
+  });
+  answerButton.addEventListener('click', function () {
+    this.classList.toggle('active');
+    var content = this.nextElementSibling;
 
-      if (content.style.display === 'block') {
-        content.style.display = 'none';
-        answerButton.textContent = 'Show answer';
-      } else {
-        content.style.display = 'block';
-        answerButton.textContent = 'Hide answer';
-      }
-    });
-    var answer = createElement({
-      type: 'paragraph',
-      className: 'content displaynone',
-      text: 'Properties are basically information that an object has. Methods are what an object can do. Example: You have an instance (object) from a class named Vehicle, which can represent a car, a truck or a motorbike.',
-      target: newCard
-    });
-    var ul = createElement({
-      type: 'ul',
-      className: 'tag-list',
-      text: '',
-      target: newCard
-    });
-    var tag1 = createElement({
-      type: 'li',
-      className: 'tag-list li',
-      text: 'tag 1',
-      target: ul
-    });
-    var tag2 = createElement({
-      type: 'li',
-      className: 'tag-list li',
-      text: 'tag 2',
-      target: ul
-    });
-  }
+    if (content.style.display === 'block') {
+      content.style.display = 'none';
+      answerButton.textContent = 'Show answer';
+    } else {
+      content.style.display = 'block';
+      answerButton.textContent = 'Hide answer';
+    }
+  });
+  var answerInput = createElement({
+    type: 'paragraph',
+    className: 'content displaynone',
+    text: answer,
+    target: newCard
+  });
+  var ul = createElement({
+    type: 'ul',
+    className: 'tag-list',
+    text: '',
+    target: newCard
+  });
+  var tag1 = createElement({
+    type: 'li',
+    className: 'tag-list li',
+    text: tags,
+    target: ul
+  });
+}
 
-  function createElement() {
-    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-        _ref$type = _ref.type,
-        type = _ref$type === void 0 ? 'section' : _ref$type,
-        _ref$className = _ref.className,
-        className = _ref$className === void 0 ? '' : _ref$className,
-        _ref$text = _ref.text,
-        text = _ref$text === void 0 ? '' : _ref$text,
-        _ref$target = _ref.target,
-        target = _ref$target === void 0 ? placeholder : _ref$target;
+function createElement() {
+  var _ref2 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      _ref2$type = _ref2.type,
+      type = _ref2$type === void 0 ? 'section' : _ref2$type,
+      _ref2$className = _ref2.className,
+      className = _ref2$className === void 0 ? '' : _ref2$className,
+      _ref2$text = _ref2.text,
+      text = _ref2$text === void 0 ? '' : _ref2$text,
+      _ref2$target = _ref2.target,
+      target = _ref2$target === void 0 ? placeholder : _ref2$target;
 
-    var el = document.createElement(type);
-    el.className = className;
-    el.textContent = text;
-    target.appendChild(el);
-    return el;
-  }
+  var el = document.createElement(type);
+  el.className = className;
+  el.textContent = text;
+  target.appendChild(el);
+  return el;
+}
 
-  function get(selector) {
-    return document.querySelector(selector);
-  }
+function get(selector) {
+  return document.querySelector(selector);
 }
 },{}],"src/js/bookmarks.js":[function(require,module,exports) {
 "use strict";
@@ -316,18 +312,6 @@ function Bookmarks() {
     return bookmarkButton3.classList.toggle('card__bookmark-button--active');
   });
 }
-},{}],"src/js/show-answer.js":[function(require,module,exports) {
-// export function ShowAnswer() {
-//   answerButton.addEventListener('click', function () {
-//     this.classList.toggle('active')
-//     let content = this.nextElementSibling
-//     if (content.style.display === 'block') {
-//       content.style.display = 'none'
-//     } else {
-//       content.style.display = 'block'
-//     }
-//   })
-// }
 },{}],"src/js/form.js":[function(require,module,exports) {
 "use strict";
 
@@ -336,14 +320,31 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Form = Form;
 
+var _card = require("./card");
+
+function _readOnlyError(name) { throw new Error("\"" + name + "\" is read-only"); }
+
 function Form() {
+  var question = document.querySelector('[data-js=question]');
+  var answer = document.querySelector('[data-js=answer]');
+  var tags = document.querySelector('[data-js=tags]');
   var fromSubmit = document.querySelector('.submit-button');
   fromSubmit === null || fromSubmit === void 0 ? void 0 : fromSubmit.addEventListener('submit', function (event) {
+    question = (_readOnlyError("question"), question.value);
+    answer = (_readOnlyError("answer"), answer.value);
+    tags = (_readOnlyError("tags"), tags.value.split(',').map(function (tags) {
+      return tags.trim();
+    }));
+    (0, _card.createCard)({
+      question: question,
+      answer: answer,
+      tags: tags
+    });
     event.preventDefault();
     resetForm();
   });
 }
-},{}],"src/js/day-nightmode.js":[function(require,module,exports) {
+},{"./card":"src/js/card.js"}],"src/js/day-nightmode.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -375,8 +376,6 @@ var _card = require("./card");
 
 var _bookmarks = require("./bookmarks");
 
-var _showAnswer = require("./show-answer");
-
 var _form = require("./form");
 
 var _dayNightmode = require("./day-nightmode");
@@ -386,12 +385,11 @@ document.addEventListener('DOMContentLoaded', function () {
     (0, _nav.Navigation)();
     (0, _card.Card)();
     (0, _bookmarks.Bookmarks)();
-    (0, _showAnswer.ShowAnswer)();
     (0, _form.Form)();
     (0, _dayNightmode.DayNightMode)();
   });
 });
-},{"./nav":"src/js/nav.js","./card":"src/js/card.js","./bookmarks":"src/js/bookmarks.js","./show-answer":"src/js/show-answer.js","./form":"src/js/form.js","./day-nightmode":"src/js/day-nightmode.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./nav":"src/js/nav.js","./card":"src/js/card.js","./bookmarks":"src/js/bookmarks.js","./form":"src/js/form.js","./day-nightmode":"src/js/day-nightmode.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -419,7 +417,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62718" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62944" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
