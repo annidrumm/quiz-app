@@ -196,75 +196,16 @@ function Navigation() {
     headerProfile.classList.remove('displaynone');
   });
 }
-},{}],"src/js/bookmarks.js":[function(require,module,exports) {
+},{}],"src/js/card.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Bookmarks = Bookmarks;
+exports.Card = Card;
 
-function Bookmarks() {
-  var bookmarkButton = document.querySelector('#bookmark1');
-  bookmarkButton === null || bookmarkButton === void 0 ? void 0 : bookmarkButton.addEventListener('click', function () {
-    return bookmarkButton.classList.toggle('card__bookmark-button--active');
-  });
-  var bookmarkButton2 = document.querySelector('#bookmark2');
-  bookmarkButton2 === null || bookmarkButton2 === void 0 ? void 0 : bookmarkButton2.addEventListener('click', function () {
-    return bookmarkButton2.classList.toggle('card__bookmark-button--active');
-  });
-  var bookmarkButton3 = document.querySelector('#bookmark3');
-  bookmarkButton3 === null || bookmarkButton3 === void 0 ? void 0 : bookmarkButton3.addEventListener('click', function () {
-    return bookmarkButton3.classList.toggle('card__bookmark-button--active');
-  });
-}
-},{}],"src/js/form.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Form = Form;
-
-function Form() {
-  var fromSubmit = document.querySelector('.submit-button');
-  fromSubmit === null || fromSubmit === void 0 ? void 0 : fromSubmit.addEventListener('submit', function (event) {
-    event.preventDefault();
-    resetForm();
-  });
-}
-},{}],"src/js/day-nightmode.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.DayNightMode = DayNightMode;
-
-function DayNightMode() {
-  var darkMode = document.querySelector('.night__button');
-  var body = document.querySelector('body');
-  var lightMode = document.querySelector('.light__button');
-  lightMode === null || lightMode === void 0 ? void 0 : lightMode.addEventListener('click', function () {
-    body.classList.add('light-mode');
-    darkMode.classList.remove('displaynone');
-    lightMode.classList.add('displaynone');
-  });
-  darkMode === null || darkMode === void 0 ? void 0 : darkMode.addEventListener('click', function () {
-    body.classList.remove('light-mode');
-    lightMode.classList.remove('displaynone');
-    darkMode.classList.add('displaynone');
-  });
-}
-},{}],"src/js/arraycard.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Arraycard = Arraycard;
-
-function Arraycard() {
+//import { ShowAnswer } from './show-answer'
+function Card() {
   var placeholder = get('[data-js=placeholder]');
   var card = [{}, {}, {}];
   card.forEach(createCard);
@@ -293,9 +234,21 @@ function Arraycard() {
       text: 'Show Answer',
       target: newCard
     });
+    answerButton.addEventListener('click', function () {
+      this.classList.toggle('active');
+      var content = this.nextElementSibling;
+
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+        answerButton.textContent = 'Show answer';
+      } else {
+        content.style.display = 'block';
+        answerButton.textContent = 'Hide answer';
+      }
+    });
     var answer = createElement({
       type: 'paragraph',
-      className: 'content',
+      className: 'content displaynone',
       text: 'Properties are basically information that an object has. Methods are what an object can do. Example: You have an instance (object) from a class named Vehicle, which can represent a car, a truck or a motorbike.',
       target: newCard
     });
@@ -341,31 +294,104 @@ function Arraycard() {
     return document.querySelector(selector);
   }
 }
+},{}],"src/js/bookmarks.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Bookmarks = Bookmarks;
+
+function Bookmarks() {
+  var bookmarkButton = document.querySelector('#bookmark1');
+  bookmarkButton === null || bookmarkButton === void 0 ? void 0 : bookmarkButton.addEventListener('click', function () {
+    return bookmarkButton.classList.toggle('card__bookmark-button--active');
+  });
+  var bookmarkButton2 = document.querySelector('#bookmark2');
+  bookmarkButton2 === null || bookmarkButton2 === void 0 ? void 0 : bookmarkButton2.addEventListener('click', function () {
+    return bookmarkButton2.classList.toggle('card__bookmark-button--active');
+  });
+  var bookmarkButton3 = document.querySelector('#bookmark3');
+  bookmarkButton3 === null || bookmarkButton3 === void 0 ? void 0 : bookmarkButton3.addEventListener('click', function () {
+    return bookmarkButton3.classList.toggle('card__bookmark-button--active');
+  });
+}
+},{}],"src/js/show-answer.js":[function(require,module,exports) {
+// export function ShowAnswer() {
+//   answerButton.addEventListener('click', function () {
+//     this.classList.toggle('active')
+//     let content = this.nextElementSibling
+//     if (content.style.display === 'block') {
+//       content.style.display = 'none'
+//     } else {
+//       content.style.display = 'block'
+//     }
+//   })
+// }
+},{}],"src/js/form.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Form = Form;
+
+function Form() {
+  var fromSubmit = document.querySelector('.submit-button');
+  fromSubmit === null || fromSubmit === void 0 ? void 0 : fromSubmit.addEventListener('submit', function (event) {
+    event.preventDefault();
+    resetForm();
+  });
+}
+},{}],"src/js/day-nightmode.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DayNightMode = DayNightMode;
+
+function DayNightMode() {
+  var darkMode = document.querySelector('.night__button');
+  var body = document.querySelector('body');
+  var lightMode = document.querySelector('.light__button');
+  lightMode === null || lightMode === void 0 ? void 0 : lightMode.addEventListener('click', function () {
+    body.classList.add('light-mode');
+    darkMode.classList.remove('displaynone');
+    lightMode.classList.add('displaynone');
+  });
+  darkMode === null || darkMode === void 0 ? void 0 : darkMode.addEventListener('click', function () {
+    body.classList.remove('light-mode');
+    lightMode.classList.remove('displaynone');
+    darkMode.classList.add('displaynone');
+  });
+}
 },{}],"src/js/index.js":[function(require,module,exports) {
 "use strict";
 
 var _nav = require("./nav");
 
+var _card = require("./card");
+
 var _bookmarks = require("./bookmarks");
+
+var _showAnswer = require("./show-answer");
 
 var _form = require("./form");
 
 var _dayNightmode = require("./day-nightmode");
 
-var _arraycard = require("./arraycard");
-
-//import { ShowAnswer } from './show-answer'
 document.addEventListener('DOMContentLoaded', function () {
   setTimeout(function () {
     (0, _nav.Navigation)();
-    (0, _bookmarks.Bookmarks)(); // ShowAnswer()
-
+    (0, _card.Card)();
+    (0, _bookmarks.Bookmarks)();
+    (0, _showAnswer.ShowAnswer)();
     (0, _form.Form)();
     (0, _dayNightmode.DayNightMode)();
-    (0, _arraycard.Arraycard)();
   });
 });
-},{"./nav":"src/js/nav.js","./bookmarks":"src/js/bookmarks.js","./form":"src/js/form.js","./day-nightmode":"src/js/day-nightmode.js","./arraycard":"src/js/arraycard.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./nav":"src/js/nav.js","./card":"src/js/card.js","./bookmarks":"src/js/bookmarks.js","./show-answer":"src/js/show-answer.js","./form":"src/js/form.js","./day-nightmode":"src/js/day-nightmode.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,7 +419,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59479" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62718" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

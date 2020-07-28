@@ -1,4 +1,5 @@
-export function Arraycard() {
+//import { ShowAnswer } from './show-answer'
+export function Card() {
   const placeholder = get('[data-js=placeholder]')
   const card = [{}, {}, {}]
 
@@ -31,9 +32,22 @@ export function Arraycard() {
       text: 'Show Answer',
       target: newCard,
     })
+
+    answerButton.addEventListener('click', function () {
+      this.classList.toggle('active')
+      let content = this.nextElementSibling
+      if (content.style.display === 'block') {
+        content.style.display = 'none'
+        answerButton.textContent = 'Show answer'
+      } else {
+        content.style.display = 'block'
+        answerButton.textContent = 'Hide answer'
+      }
+    })
+
     const answer = createElement({
       type: 'paragraph',
-      className: 'content',
+      className: 'content displaynone',
       text:
         'Properties are basically information that an object has. Methods are what an object can do. Example: You have an instance (object) from a class named Vehicle, which can represent a car, a truck or a motorbike.',
       target: newCard,
