@@ -1,6 +1,6 @@
 # quiz-app
 
-A simple app with questions and answers:
+A simple app with questions and answers.
 
 ## Live
 
