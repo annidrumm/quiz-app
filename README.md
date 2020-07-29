@@ -2,6 +2,6 @@
 
 A simple app with questions and answers.
 
-## Live
+## live
 
 https://annidrumm.github.io/quiz-app/
