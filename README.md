@@ -4,9 +4,7 @@ A simple app with questions and answers:
 
 https://annidrumm.github.io/quiz-app/
 
+
 | **Team1**            |
 | ------------------- |
-| Anni  |
-| Jennifer      |
-| Dennis          |
-| Maxi       |
+| Anni  | | Jennifer      | | Dennis          | | Maxi       |
