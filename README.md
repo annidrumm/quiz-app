@@ -3,8 +3,3 @@
 A simple app with questions and answers:
 
 https://annidrumm.github.io/quiz-app/
-
-
-| **Team**            |
-| ------------------- |
-| Anni  |  Jennifer      |  Dennis          | Maxi       |
